@@ -1,6 +1,12 @@
 package hello;
 
-public class Email {
+import java.io.Serializable;
+
+// Add Serializable
+public class Email implements Serializable {
+
+    // Serializer ID
+    private static final long serialVersionUID = -295422703255886286L;
 
     private String to;
     private String body;

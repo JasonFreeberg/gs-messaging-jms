@@ -27,7 +27,7 @@ public class Application {
 
     @Bean
     public JmsTemplate jmsTemplate() throws NamingException {
-        String connectionString = "Endpoint=sb://freebergtest.servicebus.windows.net/;SharedAccessKeyName=sendandlistenpolicy;SharedAccessKey=sXfPNJxx2T95aCeMK3kzfBRBCBImMRnXJznH0DyzhoU=;EntityPath=jmsqueuetest";
+        String connectionString = "Endpoint=sb://<namespace>.servicebus.windows.net/;SharedAccessKeyName=<accesskey>;SharedAccessKey=<access key>;EntityPath=mailbox";
         String clientId = "exampleClient";
         return new JmsTemplate(new CachingConnectionFactory(new ServiceBusConnectionFactory(connectionString, clientId)));
     }
