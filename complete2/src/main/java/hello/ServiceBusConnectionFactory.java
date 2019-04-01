@@ -3,6 +3,8 @@ package hello;
 import javax.jms.ConnectionFactory;
 import org.apache.qpid.jms.JmsConnectionFactory;
 import com.microsoft.azure.servicebus.primitives.ConnectionStringBuilder;
+import org.springframework.stereotype.Component;
+
 
 public class ServiceBusConnectionFactory extends JmsConnectionFactory implements ConnectionFactory {
 

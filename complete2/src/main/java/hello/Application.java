@@ -1,7 +1,7 @@
 
 package hello;
 
-//import javax.jms.ConnectionFactory;
+import javax.jms.ConnectionFactory;
 import javax.naming.NamingException;
 
 import hello.ServiceBusConnectionFactory;
@@ -32,8 +32,8 @@ public class Application {
         return new JmsTemplate(new CachingConnectionFactory(new ServiceBusConnectionFactory(connectionString, clientId)));
     }
 
-    @Bean  // Change the "ConnectionFactory" to "ServiceBusConnectionFactory"
-    public JmsListenerContainerFactory<?> myFactory(ServiceBusConnectionFactory connectionFactory,
+    @Bean
+    public JmsListenerContainerFactory<?> myFactory(ConnectionFactory connectionFactory,
                                                     DefaultJmsListenerContainerFactoryConfigurer configurer) {
         DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
         // This provides all boot's default to this factory, including the message converter
