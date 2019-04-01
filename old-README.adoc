@@ -4,6 +4,11 @@
 :source-highlighter: prettify
 :project_id: gs-messaging-jms
 
+== Instructions for ServiceBus
+
+Use the "complete/" project. 
+
+
 This guide walks you through the process of publishing and subscribing to messages using a JMS broker.
 
 == What you'll build
